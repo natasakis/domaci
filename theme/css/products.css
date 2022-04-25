@@ -1,0 +1,225 @@
+body{
+    width: 98%;
+    font-family: sans-serif;
+    position: absolute;
+}
+header{
+    width: 98%;
+    background-color: #d23725;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
+}
+header nav li{
+    display: inline-block;
+    padding: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: -10px;
+}
+header nav li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+aside{
+    padding: 20px;
+    width: 20%;
+    float: left;
+}
+aside .aside_checkbox{
+    float: left;
+}
+.aside_checkbox label{
+    float: left;
+    width: 150px;
+    font-weight: bold;
+}
+.short-label{
+    width:50px;
+}
+.aside_checkbox ul{
+    margin: 0;
+    list-style: none;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.aside_checkbox ul li label{
+    font-size: smaller;
+    font-weight: lighter;
+}
+:checked {
+    margin-left: 25px;
+  }
+
+main {
+    float: left;
+    display: grid;
+    width: 70%;
+    grid-template-columns: 33% 33% 33%;
+    
+}
+.product{
+    margin-bottom: 50px;
+    margin: 10px; 
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: center;
+}
+/*.product:nth-child(even){
+    background-color: rgba(211,211,211,0.6);
+}*/
+.product_subdiv img{
+    float: left;
+    margin: 10px;
+    margin-left: 15px;
+    margin-top:0;
+    width: 50%;
+    padding-bottom: 10px;
+}
+.product_subdiv{
+  padding: 20px;
+  text-align: center;
+}
+.product_subsubdiv button{
+    color:white;
+    background-color: forestgreen;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.product_subsubdiv button:hover{
+    background-color: #d23725;
+    color:white;
+}
+.product_subsubdiv{
+    width: 30%;
+    float: right;
+    padding-top: 0px;
+}
+.product_subsubdiv p{
+    color:#d23725;
+    font-weight: bolder;
+}
+.snizenje{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.product h6{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+/*.product h6::first-letter {
+    color: #d23725;
+    font-size: x-large;
+  }*/
+footer{
+    background-color: #d23725;
+    width: 98%;
+    text-align: center;
+    clear: both;
+    height: 30px;
+}
+footer nav li{
+    display: inline;
+}
+footer nav li a{
+    font-size: x-small;
+    text-decoration: none;
+    color: grey;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#up_a{
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 70px;
+}
+a:active {
+    color: forestgreen;
+  }
+#filter{
+    visibility: hidden;
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: fixed;
+    left: 20px;
+    top:70px;
+}
+#menu{
+    visibility: hidden;
+    height: 30px;
+    width: 30px;
+    position: sticky;
+    left: 90%;
+    top:12px;
+}
+@media only screen and (max-width:1200px){
+    main{
+        grid-template-columns: 50% 50%;
+    }
+}
+@media only screen and (max-width:922px){
+    main{
+        clear:both;
+        grid-template-columns: 50% 50%;
+        margin-left:15%;
+    }
+    aside{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 21% 28% 9%;
+        margin-left:15%;
+    }
+}
+@media only screen and (max-width:768px){
+    header nav li a{
+        font-size: x-small;
+    }
+}
+@media only screen and (max-width:576px){
+    main{
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    main .product{
+        transform: translateX(10%);
+        width: 80%;
+    }
+}
+@media only screen and (max-width:390px){
+    aside{display: none;}
+    header nav{display:none;}
+    .product{
+        transform: translateX(15%);
+    }
+    .product_subsubdiv{
+        transform: translateY(-15%);
+    }
+    #filter, #menu{
+        visibility: visible;
+    }
+}
+
+
